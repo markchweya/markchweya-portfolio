@@ -39,7 +39,6 @@ for (let i = 0; i < totalNavList; i++) {
     }
 }
 
-// ... (rest of the code remains unchanged)
 
 
 function removeBackSection() {
