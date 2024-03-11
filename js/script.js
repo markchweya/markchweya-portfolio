@@ -1,7 +1,7 @@
 /* ============================== typing animation ============================ */
 /* ============================== typing animation ============================ */
 var typed = new Typed(".typing", {
-    strings: ["", "Web Developer", "Web Designer"],
+    strings: ["", "Web Developer", "Web Designer", "UI/UX Designer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
@@ -76,6 +76,8 @@ document.querySelector(".hire-me").addEventListener("click", function () {
     removeBackSection();
     addBackSection(sectionIndex);
 });
+
+
 
 const navTogglerBtn = document.querySelector(".nav-toggler"),
     aside = document.querySelector(".aside");
