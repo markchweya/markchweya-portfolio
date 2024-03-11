@@ -92,3 +92,31 @@ function asideSectionTogglerBtn() {
         allSection[i].classList.toggle("open");
     }
 }
+
+
+
+emailjs.init("zwZ830gmYZbXMTaA6"); // Replace 'user_your_user_id' with your actual user ID
+
+function submitForm() {
+  // Collect form data
+  const templateParams = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value,
+  };
+
+  // Send email using emailJS
+  emailjs.send('service_uc20xaq', 'template_4kkvqra', templateParams)
+    .then(function(response) {
+      console.log('Email sent successfully:', response);
+      alert('Form submitted successfully!');
+      // You can optionally redirect to another page or refresh the current page here.
+    }, function(error) {
+      console.error('Failed to send email:', error);
+      alert('Error submitting form. Please try again later.');
+    });
+
+  // Prevent the form from submitting normally
+  return false;
+}
